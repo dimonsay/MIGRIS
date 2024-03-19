@@ -1,0 +1,59 @@
+<form #form="ngForm" (ngSubmit)="createUser(form)">
+    <div class="title">Добавить пользователя</div>
+    <div class="input-wrapper col">
+        <label for="migration">MIGRIS</label>
+        <input type="name" [(ngModel)]="migris" name="migration" required validateOnBlur>
+    </div>
+    <div class="row">
+        <div class="input-wrapper col">
+            <label for="name">Имя</label>
+            <input type="name" [(ngModel)]="name" name="name" required validateOnBlur>
+        </div>
+        <div class="input-wrapper col">
+            <label for="surname">Фамилия</label>
+            <input type="name" [(ngModel)]="surname" name="surname" required validateOnBlur>
+        </div>
+    </div>
+    <div class="input-wrapper col">
+        <label for="date">Дата рождения</label>
+        <input type="date" [(ngModel)]="date" name="date" required validateOnBlur>
+    </div>
+    <div class="row">
+        <div class="input-wrapper col">
+            <label for="passport">Паспорт</label>
+            <input type="name" [(ngModel)]="passport" name="passport" required validateOnBlur>
+        </div>
+
+        <div class="input-wrapper col">
+            <label for="expire">Год паспорта</label>
+            <input type="date" [(ngModel)]="expireDate" name="expire" required validateOnBlur>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-wrapper col">
+            <label for="phonecode">Код страны</label>
+            <input type="name" [(ngModel)]="phoneCode" name="phonecode" required validateOnBlur>
+        </div>
+        <div class="input-wrapper col">
+            <label for="phonenumber">Номер телефона </label>
+            <input type="text" [(ngModel)]="phoneNumber" name="phonenumber" required validateOnBlur>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-wrapper col">
+            <label for="email">Почта</label>
+            <input type="email" [(ngModel)]="email" name="email" required validateOnBlur>
+        </div>
+        <div class="input-wrapper col">
+            <label for="password">Пароль от аккаунта</label>
+            <input type="text" [(ngModel)]="password" name="password" required validateOnBlur>
+        </div>
+    </div>
+
+    <button class="submit" type="submit" [disabled]="!form.valid">Добавить пользователя</button>
+
+    <div class="success" *ngIf="showSuccess"> 
+        Пользователь был успешно добавлен
+    </div>
+</form>

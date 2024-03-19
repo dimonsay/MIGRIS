@@ -1,0 +1,57 @@
+.user {
+    text-align: center;
+    border: 1px solid #dfe5eb;
+    box-shadow: 0 0px 4px black;
+    padding: .5rem 1rem;
+    min-width: 260px;
+    width: 30%;
+    height: 6rem;
+    font-size: .8rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.fa-user {
+    margin: .2rem;
+}
+
+.fa-square-xmark {
+    color: red;
+    border-radius: 4px;
+    font-size: 25px;
+}
+
+.fa-square-xmark:hover,
+.fa-user:hover, .fa-pencil {
+    cursor: pointer;
+}
+
+.fa-user {
+    line-height: normal;
+    font-size: 18px;
+    color: black;
+    transition: color .3s ease;
+}
+
+.fa-pencil{
+    color: green;
+}
+
+.fa-user:hover {
+    color: blue;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,22 @@
+<div class="user col">
+    <div class="userData">
+        <div class="row">
+            <div class="name">ИМЯ:</div>
+            <div class="name">{{ user.name }}</div>
+        </div>
+        <div class="row">
+            <div class="surname">ФАМИЛИЯ:</div>
+            <div class="surname">{{ user.surname }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="passport">ПАСПОРТ:</div>
+        <div class="passport">{{ user.passport }}</div>
+    </div>
+    <div class="center row">
+        <a [routerLink]="['/user', user.id]">
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <i class="fa-solid fa-square-xmark" (click)="deleteUser(user.id)"></i>
+    </div>
+</div>

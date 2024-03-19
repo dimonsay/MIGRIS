@@ -1,0 +1,52 @@
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-wrapper{
+    box-shadow: 0 0px 4px black;
+    height: 1.5rem;
+    padding: 12px;
+    text-align: center;
+}
+
+.navigation{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.navItem:hover{
+    cursor: pointer;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navItem::before,
+.navItem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease; /* Плавное изменение ширины */
+    transform: translateX(-50%);
+}
+
+.navItem:hover::before,
+.navItem:hover::after {
+    width: 100%;
+}
+
+/* Первый псевдоэлемент будет слева от элемента, второй - справа */
+.navItem::before {
+    transform-origin: left;
+}
+
+.navItem::after {
+    transform-origin: right;
+}
+

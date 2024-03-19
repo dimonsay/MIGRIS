@@ -1,0 +1,69 @@
+<div class="user-wrapper">
+    <div class="user col" *ngIf="user">
+        <div class="title col">
+            <div class="migris">{{user.migris}}</div>
+            <div class="fullName row">
+                <div class="name">{{user.name}} </div>
+                <div class="surname">{{user.surname}}</div>
+            </div>
+        </div>
+
+        <div class="data col">
+            <div class="birth_date row">
+                <div>Дата рождения:</div>
+                <div>{{user.birth_date}}</div>
+            </div>
+
+            <div class="passport row">
+                <div>Паспорт: </div>
+                <div>{{user.passport}}</div>
+            </div>
+
+            <div class="expired_date row">
+                <div>Срок годности паспорта: </div>
+                <div>{{user.expired_date}}</div>
+            </div>
+
+            <div class="phone row">
+                <div>Телефон: </div>
+                <div>+{{user.phone_code}} {{user.phone_number}}</div>
+            </div>
+
+            <div class="email row">
+                <div>Почта: </div>
+                <div>{{user.email}}</div>
+            </div>
+
+            <div class="passport row">
+                <div>Пароль от почты: </div>
+                <div>{{user.password}}</div>
+            </div>
+        </div>
+
+        <div class="change col">
+            <div class="select-wrap">
+                <select id="cars" name="change" [(ngModel)]="key" [value]="key">
+                    <option value="migris">MIGRIS</option>
+                    <option value="name">ИМЯ</option>
+                    <option value="surname">ФАМИЛИЯ</option>
+                    <option value="birth_date">ДАТА РОЖДЕНИЯ</option>
+                    <option value="passport">ПАСПОРТ</option>
+                    <option value="expired_date">СРОК ГОДНОСТИ ПАСПОРТА</option>
+                    <option value="phone_code">КОД СТРАНЫ</option>
+                    <option value="phone_number">НОМЕР ТЕЛЕФОНА</option>
+                    <option value="email">ПОЧТА</option>
+                    <option value="password">ПАРОЛЬ</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <input type="text" class="changingInput" [placeholder]="key" [(ngModel)]="value">
+                <div class="sumbit" (click)="sendChange(user.id)">Внести изменение</div>
+            </div>
+
+            <div class="success">ДАННЫЕ ОБНОВЛЕНЫ</div>
+        </div>
+
+
+    </div>
+</div>
